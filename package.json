@@ -6,7 +6,7 @@
     "plugin",
     "recaptcha"
   ],
-  "main": "dist/gatsby-ssr.js",
+  "main": "gatsby-ssr.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
@@ -14,14 +14,14 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "esca-scripts build",
+    "build": "esca-scripts build --dist './' --no-remove",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "npm run build && esca-scripts test",
     "travis": "opn https://travis-ci.org/escaladesports/gatsby-plugin-recaptcha/branches"
   },
   "devDependencies": {
-    "esca-scripts": "^1.3.1",
+    "esca-scripts": "^1.4.0",
     "opn-cli": "^3.1.0"
   },
   "dependencies": {
