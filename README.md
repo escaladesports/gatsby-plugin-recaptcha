@@ -1,17 +1,43 @@
-# Gatsby Plugin Boilerplate
+# gatsby-plugin-recaptcha
 
-A simple Gatsby plugin boilerplate.
+Appends the [reCAPTCHA](https://www.google.com/recaptcha/) .js snippet to your Gatsby site. Works great with [react-recaptcha](https://www.npmjs.com/package/react-recaptcha).
 
-## Getting started
+## Installation
+
+With npm:
 
 ```bash
-git clone git@github.com:escaladesports/gatsby-plugin-boilerplate.git your-module
-cd your-module
-yarn
-yarn reset
+npm install --save gatsby-plugin-recaptcha
 ```
 
-## Usage
+Or with Yarn:
 
-- `yarn test`: Run mocha tests
-- `yarn analyze`: View bundle sizes
+```bash
+yarn add gatsby-plugin-recaptcha
+```
+
+## Implementation
+
+```javascript
+// In your gatsby-config.js
+plugins: [`gatsby-plugin-recaptcha`]
+```
+
+## Options
+
+- `async`: Add an async attribute to the script tag (default: `true`)
+- `defer`: Add a defer attribute to the script tag (default: `false`)
+- `args`: Append a string to the end of the script URL (default: `""`)
+
+```javascript
+plugins: [
+   {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+         async: false,
+         defer: false,
+         args: `?onload=onloadCallback&render=explicit`,
+      },
+   },
+]
+```
