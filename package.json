@@ -6,7 +6,7 @@
     "plugin",
     "recaptcha"
   ],
-  "main": "gatsby-browser.js",
+  "main": "dist/gatsby-ssr.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "repository": {
     "type": "git",
